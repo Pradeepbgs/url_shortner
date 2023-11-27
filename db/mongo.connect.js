@@ -2,7 +2,7 @@ import mongoose from 'mongoose'
 
 export const connectDB = async () => {
     try {
-        await mongoose.connect('mongodb://localhost:27017/url_shortner_revise')
+        await mongoose.connect(process.env.MONGODB_URL)
         console.log("connected to db")
     } catch (error) {
         console.log("error in mongo.connect.js")
