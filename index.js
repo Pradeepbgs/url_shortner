@@ -18,5 +18,3 @@ app.use('/',routerUrl)
 app.listen(PORT, () => {
     console.log('Server running on port 3000');
 })
-
-console.log("my name is::", process.env.MY_NAME)
