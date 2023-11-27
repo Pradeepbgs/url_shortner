@@ -6,6 +6,10 @@ const router = express.Router()
 
 router.post('/', handleShortId)
 
+router.get('/', function(req, res) {
+    res.send("hello")
+})
+
 router.get('/:shortId', async function(req, res) {
     const shortId = req.params.shortId;
     const entry = await Url.findOne(
