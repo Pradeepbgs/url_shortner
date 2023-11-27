@@ -6,7 +6,7 @@ const router = express.Router()
 
 router.post('/', handleShortId)
 
-router.get('/login', function(req, res) {
+router.get('/', function(req, res) {
     res.send("hello")
 })
 
