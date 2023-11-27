@@ -7,7 +7,7 @@ const router = express.Router()
 router.post('/', handleShortId)
 
 router.get('/', function(req, res) {
-    res.send("hello")
+    res.render('index')
 })
 
 router.get('/:shortId', async function(req, res) {
@@ -15,7 +15,7 @@ router.get('/:shortId', async function(req, res) {
     const entry = await Url.findOne(
         {shortId: shortId}
     )
-    res.redirect(entry.redirectUrl)
+    res.redirect(entry?.redirectUrl)
 })
 
 export default router
