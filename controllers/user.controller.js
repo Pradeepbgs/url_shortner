@@ -11,7 +11,7 @@ async function handleShortId(req, res){
         redirectUrl: body.url,
     })
 
-    res.status(201).json({shortId: shortId})
+    res.render('urlCopy', {shortId: "https://urlshortner-production-f439.up.railway.app/"+shortId})
 }
 
 export {handleShortId}
