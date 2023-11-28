@@ -10,8 +10,8 @@ async function handleShortId(req, res){
         shortId: shortId,
         redirectUrl: body.url,
     })
-
-    res.render('urlCopy', {shortId: "https://urlshortner-production-f439.up.railway.app/"+shortId})
+    const railway_service_url = "https://urlshortner-production-f439.up.railway.app/";
+    res.json({shortUrl : railway_service_url+shortId})
 }
 
 export {handleShortId}
