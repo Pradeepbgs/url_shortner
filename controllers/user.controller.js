@@ -11,7 +11,8 @@ async function handleShortId(req, res){
         redirectUrl: body.url,
     })
     const railway_service_url = "https://urlshortner-production-f439.up.railway.app/";
-    res.json({shortUrl : railway_service_url+shortId})
+    // res.json({shortUrl : railway_service_url+shortId})
+    res.render('urlCopy',{shortUrl : railway_service_url+shortId})
 }
 
 export {handleShortId}
